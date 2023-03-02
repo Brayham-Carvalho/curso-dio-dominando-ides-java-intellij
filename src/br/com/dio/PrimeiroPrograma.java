@@ -6,8 +6,46 @@ public class PrimeiroPrograma {
     public static void main(String[] args) {
         Gato gato = new Gato();
         System.out.println(gato);
+
+        Livro livro = new Livro("O problema dos 3 corpos", 300 );
+        System.out.println(livro);
+
         /*int a = 5;
         int b = 3;
         System.out.println("Hello World! " + (a+b));*/
+    }
+}
+
+class Livro{
+    private String nome;
+    private String numPagina;
+
+    public Livro(String nome, int numPagina) {
+        this.nome = nome;
+        this.numPagina = String.valueOf(numPagina);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNumPagina() {
+        return numPagina;
+    }
+
+    public void setNumPagina(String numPagina) {
+        this.numPagina = numPagina;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "nome='" + nome + '\'' +
+                ", numPagina='" + numPagina + '\'' +
+                '}';
     }
 }
